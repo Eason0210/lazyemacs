@@ -42,20 +42,20 @@
   (magit-status)
   (other-window 1))
 
-;; (defun magit-blame+ ()
-;;   (interactive)
-;;   (setq magit-blame--style
-;;         '(margin
-;;           (margin-format " %s%f" " %C %a" " %H")
-;;           (margin-width . 42)
-;;           (margin-face . magit-blame-margin)
-;;           (margin-body-face magit-blame-dimmed)))
-;;   (magit-blame))
+(defun magit-blame+ ()
+  (interactive)
+  (setq magit-blame--style
+        '(margin
+          (margin-format " %s%f" " %C %a" " %H")
+          (margin-width . 42)
+          (margin-face . magit-blame-margin)
+          (margin-body-face magit-blame-dimmed)))
+  (magit-blame))
 
-;; (defun magit-delete-remote-branch ()
-;;   (interactive)
-;;   (when (y-or-n-p (format "Delete remote branch (%s): " (magit-get-current-branch)))
-;;     (magit-run-git-async "push" "origin" (format ":%s" (magit-get-current-branch)))))
+(defun magit-delete-remote-branch ()
+  (interactive)
+  (when (y-or-n-p (format "Delete remote branch (%s): " (magit-get-current-branch)))
+    (magit-run-git-async "push" "origin" (format ":%s" (magit-get-current-branch)))))
 
 (provide 'init-git)
 ;;; init-git.el ends here
