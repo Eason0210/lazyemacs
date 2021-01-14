@@ -27,7 +27,8 @@
 ;; Magit
 (lazy-load-global-keys
  '(
-   ("C-x g" . magit-status+))
+   ("C-x g" . magit-status+)
+   ("s-x g" . magit-submodule-add+))
  "init-git")
 
 (provide 'init-key)
